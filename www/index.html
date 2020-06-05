@@ -1,0 +1,182 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+  <script src="components/loader.js"></script>
+  <script src="lib/onsenui/js/onsenui.min.js"></script>
+
+  <link rel="stylesheet" href="components/loader.css">
+  <link rel="stylesheet" href="lib/onsenui/css/onsenui.css">
+  <link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script>
+    // Page init event
+    document.addEventListener('init', function(event) {
+      var page = event.target;
+
+      if (page.matches('#first-page')) {
+
+        page.querySelector('#push-button').onclick = function() {
+          document.querySelector('#navigator').pushPage('page2.html');
+        };
+
+       page.querySelector('#push-button2').onclick = function() {
+          document.querySelector('#navigator').pushPage('page3.html');
+        };
+
+      } else if (page.matches('#second-page')) {
+
+         page.querySelector('#push-button').onclick = function() {
+          document.querySelector('#navigator').pushPage('page4.html');
+        };
+         page.querySelector('#push-button2').onclick = function() {
+          document.querySelector('#navigator').pushPage('page5.html');
+        };  
+
+      } else if (page.matches('#third-page')) {
+
+         page.querySelector('#push-button').onclick = function() {
+          document.querySelector('#navigator').pushPage('page6.html');
+        };
+         page.querySelector('#push-button2').onclick = function() {
+          document.querySelector('#navigator').pushPage('page7.html');
+        }; 
+
+      }  
+
+
+   
+
+    });
+
+    if (ons.platform.isIPhoneX()) {
+      document.documentElement.setAttribute('onsflag-iphonex-portrait', '');
+      document.documentElement.setAttribute('onsflag-iphonex-landscape', '');
+    }
+  </script>
+</head>
+<body>
+  <ons-navigator id="navigator" page="page1.html"></ons-navigator>
+
+  <ons-template id="page1.html">
+    <ons-page id="first-page">
+      <ons-toolbar>
+        <div class="center">サイコパス診断</div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>ガラスの中の液体の色は？
+        </p>
+        <ons-button id="push-button">透明</ons-button>
+          <ons-button id="push-button2">赤</ons-button>
+      </div>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="page2.html">
+    <ons-page id="second-page">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>Page 1</ons-back-button></div>
+        <div class="center">サイコパス診断</div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>誰かが負傷しているどこを負傷している？</p>
+         <ons-button id="push-button">胸</ons-button>
+          <ons-button id="push-button2">腕</ons-button>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="page3.html">
+    <ons-page id="third-page">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>Page 1</ons-back-button></div>
+        <div class="center">サイコパス診断</div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>殺人犯がこちらをビルの下から指をさしている、なぜ？</p>
+         <ons-button id="push-button">ビルの階数を数えるため</ons-button> <br>
+          <ons-button id="push-button2">こっちに来ると威嚇するため</ons-button>
+      
+      </div>
+    </ons-page>
+  </ons-template>
+
+   <ons-template id="page4.html">
+    <ons-page id="four-page">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>Page 2</ons-back-button></div>
+        <div class="center">サイコパス診断</div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>あなたのサイコパス度は100％です</p>
+      </div>
+    </ons-page>
+  </ons-template>
+
+   <ons-template id="page5.html">
+    <ons-page id="five-page">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>Page 2</ons-back-button></div>
+        <div class="center">サイコパス診断</div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>あなたのサイコパス度は60%です</p>
+      </div>
+    </ons-page>
+  </ons-template>
+
+     <ons-template id="page5.html">
+    <ons-page id="five-page">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>Page 1</ons-back-button></div>
+        <div class="center">サイコパス診断</div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>あなたのサイコパス度は60%です</p>
+      </div>
+    </ons-page>
+  </ons-template>
+
+   <ons-template id="page6.html">
+    <ons-page id="six-page">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>Page 3</ons-back-button></div>
+        <div class="center">診断</div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>あなたのサイコパス度は30%です</p>
+      </div>
+    </ons-page>
+  </ons-template>
+
+   <ons-template id="page7.html">
+    <ons-page id="seven-page">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>Page 3</ons-back-button></div>
+        <div class="center">サイコパス診断</div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>あなたのサイコパス度は0%です</p>
+      </div>
+    </ons-page>
+  </ons-template>
+
+
+
+
+
+
+</body>
+</html>
